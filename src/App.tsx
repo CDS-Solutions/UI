@@ -1,24 +1,48 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import styles from './App.module.css';
+import Button from './components/Button/Button';
+import ColorGroup from './components/ColorGroup/ColorGroup';
+import Switch from './components/Switch/Switch';
 
 function App() {
+
+  const [disabled, setDisabled] = useState(false)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div className={styles.container}>
+
+      <ColorGroup color='green'>
+
+        <Button 
+          disabled={disabled}
+          varianted="contained"
+          onClick={() => console.log(1)}
         >
-          Learn React
-        </a>
-      </header>
+          ебать
+        </Button>
+
+        <Button 
+          disabled={disabled}
+          varianted="outlined"
+          onClick={() => console.log(1)}
+        >
+          ебать
+        </Button>
+
+        <Button 
+          disabled={disabled}
+          varianted="text"
+          onClick={() => console.log(1)}
+        >
+          ебать
+        </Button>
+
+
+        <Switch onChange={setDisabled}/>
+
+      </ColorGroup>
+      
+
     </div>
   );
 }
