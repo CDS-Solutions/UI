@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import styles from './App.module.css';
 import Button from './components/Button/Button';
 import ColorGroup from './components/ColorGroup/ColorGroup';
+import Input from './components/Input/Input';
 import Switch from './components/Switch/Switch';
 
 function App() {
 
-  const [disabled, setDisabled] = useState(false)
+  const [disabled, setDisabled] = useState(true)
+  const [buttonValue, setButtonValue] = useState<string>('ебать')
 
   return (
     <div className={styles.container}>
@@ -18,7 +20,7 @@ function App() {
           varianted="contained"
           onClick={() => console.log(1)}
         >
-          ебать
+          {buttonValue}
         </Button>
 
         <Button 
@@ -26,7 +28,7 @@ function App() {
           varianted="outlined"
           onClick={() => console.log(1)}
         >
-          ебать
+          {buttonValue}
         </Button>
 
         <Button 
@@ -34,9 +36,10 @@ function App() {
           varianted="text"
           onClick={() => console.log(1)}
         >
-          ебать
+          {buttonValue}
         </Button>
 
+        <Input disabled={disabled} onChange={(e:any) => setButtonValue(e.target.value)}/>
 
         <Switch onChange={setDisabled}/>
 

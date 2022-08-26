@@ -13,11 +13,13 @@ type ButtonPropsT = {
     children?: React.ReactNode,
     disabled?: boolean,
     color?: string,
+    width?:string,
+    height?:string,
     onClick?: () => void
 }
 
 
-const Button:FC<ButtonPropsT> = ({disabled, children, varianted, color, onClick}) => {
+const Button:FC<ButtonPropsT> = ({disabled, children, varianted, color,width, height, onClick}) => {
 
     const variantedStyle = () =>{
         switch (varianted) {
@@ -47,7 +49,7 @@ const Button:FC<ButtonPropsT> = ({disabled, children, varianted, color, onClick}
 
     return (
         <button 
-            style={variantedStyle()}
+            style={{...variantedStyle(), width, height}}
             className={styles.container}
             disabled={disabled}
             onClick={onClick}  
@@ -60,6 +62,7 @@ const Button:FC<ButtonPropsT> = ({disabled, children, varianted, color, onClick}
 Button.defaultProps ={
     color: '#3c403a',
     varianted: variantedEnum.contained,
-    disabled: false
+    disabled: false,
+
 }
 export default Button

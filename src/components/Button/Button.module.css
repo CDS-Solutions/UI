@@ -1,6 +1,5 @@
 .container{
     box-sizing: border-box;
-    padding: 5px 15px;
     border-radius: 3px;
     text-transform: uppercase;
     cursor: pointer;
