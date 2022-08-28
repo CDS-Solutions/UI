@@ -1,19 +1,24 @@
 import React, { useState } from 'react';
 import styles from './App.module.css';
 import Button from './components/Button/Button';
+import CheckBox from './components/CheckBox/CheckBox';
 import ColorGroup from './components/ColorGroup/ColorGroup';
 import Input from './components/Input/Input';
 import Switch from './components/Switch/Switch';
+// import TransferList from './components/TransferList/TransferList';
 
 function App() {
 
   const [disabled, setDisabled] = useState(true)
   const [buttonValue, setButtonValue] = useState<string>('ебать')
+  // const secondArray  = ['первый элемент', 'ваыаыва','ываывацуауа']
+  // const firstArray  = ['первый элемент', 'ваыаыва','ываывацуауа']
+
 
   return (
     <div className={styles.container}>
 
-      <ColorGroup color='green'>
+      <ColorGroup color='#2679ff'>
 
         <Button 
           disabled={disabled}
@@ -43,6 +48,8 @@ function App() {
 
         <Switch onChange={setDisabled}/>
 
+        {/* <TransferList firstArray={firstArray} secondArray={secondArray}/> */}
+        <CheckBox disabled={disabled}/>
       </ColorGroup>
       
 
