@@ -49,7 +49,7 @@ function App() {
         <Switch onChange={setDisabled}/>
 
         {/* <TransferList firstArray={firstArray} secondArray={secondArray}/> */}
-        <CheckBox disabled={disabled}/>
+        <CheckBox label={buttonValue} disabled={disabled}/>
       </ColorGroup>
       
 
