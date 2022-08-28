@@ -1,7 +1,7 @@
 .container{
     outline: none;
     box-sizing:content-box;
-    border-radius: 3px;
+    border-radius: 7px;
     padding: 0 10px;
     font-weight: 500;
 }
