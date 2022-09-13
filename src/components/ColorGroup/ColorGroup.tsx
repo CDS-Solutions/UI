@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 
 type ColorGroupProps = {
     children:  any,
-    color: string
+    color: string | any
 }
 
 const ColorGroup:FC<ColorGroupProps> = ({color, children}) => {
