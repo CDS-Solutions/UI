@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { ChangeEvent, useState } from 'react';
 import styles from './App.module.css';
 import Button from './components/Button/Button';
 import ButtonGroup from './components/ButtonGroup/ButtonGroup';
@@ -16,10 +16,10 @@ function App() {
   const [buttonValue, setButtonValue] = useState<string>('ебать')
   const [countColumns, setCountColumns] = useState<number>(2)
   const [orientation, setOrientation] = useState<string>('row')
-  
+  const [color, setColor] = useState<any>()
   // const secondArray  = ['первый элемент', 'ваыаыва','ываывацуауа']
   // const firstArray  = ['первый элемент', 'ваыаыва','ываывацуауа']
-
+  
 
   return (
     <div className={styles.container}>
@@ -90,8 +90,8 @@ function App() {
 
       <Grid shadow='m' tcolumns={countColumns}>
 
-        <ColorGroup color='#9b42f5'>
-
+        <ColorGroup color={color}>
+            <input onChange={(e: ChangeEvent<HTMLInputElement>)=> setColor(e.target.value)} type="color"color={color} />
             <Button 
               disabled={disabled}
               varianted="contained"
