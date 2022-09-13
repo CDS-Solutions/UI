@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from './App.module.css';
 import Button from './components/Button/Button';
+import ButtonGroup from './components/ButtonGroup/ButtonGroup';
 import CheckBox from './components/CheckBox/CheckBox';
 import ColorGroup from './components/ColorGroup/ColorGroup';
 import Grid from './components/Grid/Grid';
@@ -13,6 +14,7 @@ function App() {
   const [disabled, setDisabled] = useState(true)
   const [buttonValue, setButtonValue] = useState<string>('ебать')
   const [countColumns, setCountColumns] = useState<number>(2)
+  const [orientation, setOrientation] = useState<string>('row')
   
   // const secondArray  = ['первый элемент', 'ваыаыва','ываывацуауа']
   // const firstArray  = ['первый элемент', 'ваыаыва','ываывацуауа']
@@ -20,6 +22,46 @@ function App() {
 
   return (
     <div className={styles.container}>
+      <Grid tcolumns={1}>
+        
+        <Grid tcolumns={1}>
+          <ButtonGroup
+            gap={5}
+            orientation={orientation}
+            varianted="conteined"
+            disabled={disabled}
+          >
+            
+            <Button>
+              "VALUE"
+            </Button>
+            <Button>
+              "VALUE"
+            </Button>
+            <Button>
+              "VALUE"
+            </Button>
+            <Button>
+              "VALUE"
+            </Button>
+
+          </ButtonGroup>
+        </Grid>
+
+        <ButtonGroup gap={5} >
+              <Button
+                onClick={()=> setOrientation('column')}
+              >
+                Col
+              </Button>
+              <Button
+                onClick={()=> setOrientation('row')}
+
+              >
+                Row
+              </Button>
+        </ButtonGroup>
+      </Grid>
 
        <Grid tcolumns={3}>
           <Button 
