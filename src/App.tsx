@@ -5,6 +5,7 @@ import CheckBox from './components/CheckBox/CheckBox';
 import ColorGroup from './components/ColorGroup/ColorGroup';
 import Grid from './components/Grid/Grid';
 import Input from './components/Input/Input';
+import SplitButton from './components/SplitButton/SplitButton';
 import Switch from './components/Switch/Switch';
 // import TransferList from './components/TransferList/TransferList';
 
@@ -46,39 +47,49 @@ function App() {
        </Grid>
 
       <Grid shadow='m' tcolumns={countColumns}>
-        <ColorGroup color='#2679ff'>
 
-  <Button 
-    disabled={disabled}
-    varianted="contained"
-    onClick={() => console.log(1)}
-  >
-    {buttonValue}
-  </Button>
+        <ColorGroup color='#9b42f5'>
 
-  <Button 
-    disabled={disabled}
-    varianted="outlined"
-    onClick={() => console.log(1)}
-  >
-    {buttonValue}
-  </Button>
+            <Button 
+              disabled={disabled}
+              varianted="contained"
+              onClick={() => console.log(1)}
+            >
+              {buttonValue}
+            </Button>
 
-  <Button 
-    disabled={disabled}
-    varianted="text"
-    onClick={() => console.log(1)}
-  >
-    {buttonValue}
-  </Button>
+            <Button 
+              disabled={disabled}
+              varianted="outlined"
+              onClick={() => console.log(1)}
+            >
+              {buttonValue}
+            </Button>
 
-  <Input disabled={disabled} onChange={(e:any) => setButtonValue(e.target.value)}/>
+          <Button 
+            disabled={disabled}
+            varianted="text"
+            onClick={() => console.log(1)}
+          >
+            {buttonValue}
+            <b>asdasd</b>
+          </Button>
 
-  <Switch onChange={setDisabled}/>
+          <Input disabled={disabled} onChange={(e:any) => setButtonValue(e.target.value)}/>
 
-  {/* <TransferList firstArray={firstArray} secondArray={secondArray}/> */}
-  <CheckBox label={buttonValue} disabled={disabled}/>
+          <Switch onChange={setDisabled}/>
+
+          <CheckBox label={buttonValue} disabled={disabled}/>
+
+          <SplitButton
+            onClick={(value) => console.log(value)}
+            variables={['First', 'Second', 'Third']}
+          />
+
+
+
         </ColorGroup>
+
       </Grid>
 
       

@@ -18,38 +18,38 @@ type ButtonPropsT = {
     onClick?: () => void
 }
 
+export const variantedStyle = (varianted: variantedEnum | string, color: string) =>{
+    switch (varianted) {
+        case variantedEnum.text:
+            return {
+                backgroundColor: "white",
+                color: color,
+                border:'none'
+            }
+        case variantedEnum.contained:
+            return {
+                backgroundColor: color,
+                color: "white",
+                border: `2px solid ${color}`,
+                
+            }
+        case variantedEnum.outlined:
+            return {
+                backgroundColor: "white",
+                color: color,
+                border: `2px solid ${color}`,
+            }
+        default:
+            break;
+    }
+}
 
 const Button:FC<ButtonPropsT> = ({disabled, children, varianted, color,width, height, onClick}) => {
 
-    const variantedStyle = () =>{
-        switch (varianted) {
-            case variantedEnum.text:
-                return {
-                    backgroundColor: "white",
-                    color: color,
-                    border:'none'
-                }
-            case variantedEnum.contained:
-                return {
-                    backgroundColor: color,
-                    color: "white",
-                    border: `2px solid ${color}`,
-                    
-                }
-            case variantedEnum.outlined:
-                return {
-                    backgroundColor: "white",
-                    color: color,
-                    border: `2px solid ${color}`,
-                }
-            default:
-                break;
-        }
-    }
 
     return (
         <button 
-            style={{...variantedStyle(), width, height}}
+            style={{...variantedStyle(varianted || '', color || ''), width, height}}
             className={styles.container}
             disabled={disabled}
             onClick={onClick}  
