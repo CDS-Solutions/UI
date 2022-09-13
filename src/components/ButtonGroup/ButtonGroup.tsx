@@ -34,7 +34,7 @@ const ButtonGroup:FC<ColorGroupProps> = ({varianted, gap, disabled, width, color
     return (
         <div style={{...groupStyles()}}>
             {children.map((child:any) =>{
-                return  React.cloneElement(child, 
+                return  React.cloneElement({...child,  key:crypto.randomUUID()}, 
                     {   
                         varianted: varianted, 
                         width: width,
