@@ -1,11 +1,11 @@
 import React, { ChangeEvent, useState } from 'react';
-import styles from './App.module.css';
 import Button from './components/Button/Button';
 import ButtonGroup from './components/ButtonGroup/ButtonGroup';
 import CheckBox from './components/CheckBox/CheckBox';
 import ColorGroup from './components/ColorGroup/ColorGroup';
 import Grid from './components/Grid/Grid';
 import Input from './components/Input/Input';
+import Range from './components/Range/Range';
 import SplitButton from './components/SplitButton/SplitButton';
 import Switch from './components/Switch/Switch';
 // import TransferList from './components/TransferList/TransferList';
@@ -25,7 +25,11 @@ function App() {
     <Grid tcolumns={2}>
 
       <Grid tcolumns={1}>
-        
+        <ButtonGroup gap={5} >
+              <Button onClick={()=> setOrientation('column')}>Col</Button>
+              <Button onClick={()=> setOrientation('row')}>Row</Button>
+        </ButtonGroup>
+
         <Grid tcolumns={1}>
           <ButtonGroup
             gap={5}
@@ -33,36 +37,14 @@ function App() {
             varianted="conteined"
             disabled={disabled}
           >
-            
-            <Button>
-              "VALUE"
-            </Button>
-            <Button>
-              "VALUE"
-            </Button>
-            <Button>
-              "VALUE"
-            </Button>
-            <Button>
-              "VALUE"
-            </Button>
+              <Button>"VALUE"</Button>
+              <Button>"VALUE"</Button>
+              <Button>"VALUE"</Button>
 
           </ButtonGroup>
         </Grid>
 
-        <ButtonGroup gap={5} >
-              <Button
-                onClick={()=> setOrientation('column')}
-              >
-                Col
-              </Button>
-              <Button
-                onClick={()=> setOrientation('row')}
-
-              >
-                Row
-              </Button>
-        </ButtonGroup>
+       
       </Grid>
 
        <Grid tcolumns={3}>
@@ -127,12 +109,12 @@ function App() {
             onClick={(value) => console.log(value)}
             variables={['First', 'Second', 'Third']}
           />
-
-
+          <Range />
 
         </ColorGroup>
 
       </Grid>
+
 
       
       
