@@ -23,7 +23,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "component":"generate-react-cli component"
+    "component":"generate-react-cli component",
+    "page":"generate-react-cli page"
   },
   "eslintConfig": {
     "extends": [
