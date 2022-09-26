@@ -22,7 +22,8 @@ function App() {
   
 
   return (
-    <div className={styles.container}>
+    <Grid tcolumns={2}>
+
       <Grid tcolumns={1}>
         
         <Grid tcolumns={1}>
@@ -114,7 +115,6 @@ function App() {
             onClick={() => console.log(1)}
           >
             {buttonValue}
-            <b>asdasd</b>
           </Button>
 
           <Input disabled={disabled} onChange={(e:any) => setButtonValue(e.target.value)}/>
@@ -137,7 +137,7 @@ function App() {
       
       
 
-    </div>
+    </Grid>
   );
 }
 

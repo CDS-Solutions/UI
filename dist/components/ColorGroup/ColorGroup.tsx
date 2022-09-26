@@ -6,11 +6,12 @@ type ColorGroupProps = {
 }
 
 const ColorGroup:FC<ColorGroupProps> = ({color, children}) => {
-
+    
     return (
         <>
             {children.map((child:any) =>{
-                return  React.cloneElement(child, {color:color})
+                
+                return  React.cloneElement({...child, key:crypto.randomUUID()}, {color:color})
             })}
         </>
     )
