@@ -1,13 +1,13 @@
 import React, { ChangeEvent, useState } from 'react';
 import styles from './App.module.css';
-import Button from './components/Button/Button';
-import ButtonGroup from './components/ButtonGroup/ButtonGroup';
-import CheckBox from './components/CheckBox/CheckBox';
-import ColorGroup from './components/ColorGroup/ColorGroup';
-import Grid from './components/Grid/Grid';
-import Input from './components/Input/Input';
-import SplitButton from './components/SplitButton/SplitButton';
-import Switch from './components/Switch/Switch';
+import Button from './lib/components/Button/Button';
+import ButtonGroup from './lib/components/ButtonGroup/ButtonGroup';
+import CheckBox from './lib/components/CheckBox/CheckBox';
+import ColorGroup from './lib/components/ColorGroup/ColorGroup';
+import Grid from './lib/components/Grid/Grid';
+import Input from './lib/components/Input/Input';
+import SplitButton from './lib/components/SplitButton/SplitButton';
+import Switch from './lib/components/Switch/Switch';
 // import TransferList from './components/TransferList/TransferList';
 
 function App() {

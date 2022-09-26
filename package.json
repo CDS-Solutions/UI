@@ -1,7 +1,14 @@
 {
-  "name": "ui",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@cds-solutions/ui",
+  "author": "Ivan Tezin, Danila Tezin",
+  "version": "0.1.1",
+  "keywords": [
+    "react",
+    "components",
+    "ui"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
@@ -10,12 +17,9 @@
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
-    "@types/styled-components": "^5.1.26",
-    "generate-react-cli": "^7.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
-    "styled-components": "^5.3.5",
     "typescript": "^4.4.2",
     "web-vitals": "^2.1.0"
   },
@@ -23,7 +27,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "npmbuild":"babel src/lib --out-dir ./dist --copy-files"
   },
   "eslintConfig": {
     "extends": [
@@ -42,5 +47,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CDS-Solutions/UI.git"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.18.10",
+    "@babel/core": "^7.19.1",
+    "@babel/preset-env": "^7.19.1"
   }
 }

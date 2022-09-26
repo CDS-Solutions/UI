@@ -1,0 +1,10 @@
+.container{
+    outline: none;
+    box-sizing:content-box;
+    border-radius: 7px;
+    padding: 0 10px;
+    font-weight: 500;
+}
+.container:disabled{
+    filter:opacity(0.7);
+}
