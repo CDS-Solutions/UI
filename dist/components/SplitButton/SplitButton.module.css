@@ -1,0 +1,45 @@
+.wrap_buttons{
+    display: flex;
+    width: 100%;
+    position: relative;
+    gap: 0 1px;
+}
+.wrap_buttons > button:active {
+    animation:click 0.2s;
+}
+
+.button{
+    width: 80%;
+    
+}
+.items{
+    position: absolute;
+    top: 25px;
+    box-sizing: border-box;
+    width: 100%;
+    opacity: 0;
+}
+.items.show{
+    opacity: 1;
+}
+.items > div{
+    background-color: rgb(247, 247, 247);
+    padding: 0 10px;
+
+}
+.items > div.selected{
+    background-color: rgb(222, 222, 222);
+}
+.icon_button{
+    width: 20%;
+}
+
+@keyframes click {
+    0% {
+        filter:contrast(5);
+        transform: translateX(-2%);
+    }   
+    100% {
+        filter:contrast(1);
+    }
+  }

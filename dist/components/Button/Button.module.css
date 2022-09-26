@@ -1,0 +1,26 @@
+.container{
+    box-sizing: border-box;
+    border-radius: 3px;
+    text-transform: uppercase;
+    cursor: pointer;
+
+}
+.container:disabled{
+    filter:opacity(0.7);
+    cursor:auto;
+}
+.container:disabled:active{
+    animation: none;
+}
+.container:active {
+    animation:click 0.2s;
+}
+@keyframes click {
+    0% {
+        filter:contrast(5);
+        transform: translateX(-2%);
+    }   
+    100% {
+        filter:contrast(1);
+    }
+  }
