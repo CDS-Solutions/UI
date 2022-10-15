@@ -10,6 +10,7 @@ import SplitButton from './components/SplitButton/SplitButton';
 import Switch from './components/Switch/Switch';
 // import TransferList from './components/TransferList/TransferList';
 import { roundedVariant } from './components/Button/Button';
+import PieChart from './components/PieChart/PieChart';
 
 function App() {
 
@@ -135,6 +136,9 @@ function App() {
 
         </ColorGroup>
 
+      </Grid>
+      <Grid>
+        <PieChart category={[{'color': '#57d9ff', value: 20},{'color': '#f16e23', value: 20}]}/>
       </Grid>
 
       
