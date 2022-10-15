@@ -8,9 +8,15 @@ export enum variantedEnum{
     outlined = "outlined"
 }
 
+export enum roundedVariant{
+    none ="none",
+    low = "20"
+}
+
 type ButtonPropsT = {
     varianted?: variantedEnum | string,
     children?: React.ReactNode,
+    rounded?:roundedVariant | string,
     disabled?: boolean,
     color?: string,
     width?:string,
@@ -44,12 +50,12 @@ export const variantedStyle = (varianted: variantedEnum | string, color: string)
     }
 }
 
-const Button:FC<ButtonPropsT> = ({disabled, children, varianted, color,width, height, onClick}) => {
+const Button:FC<ButtonPropsT> = ({disabled, children, varianted, color,width, height, rounded, onClick}) => {
 
 
     return (
         <button 
-            style={{...variantedStyle(varianted || '', color || ''), width, height}}
+            style={{...variantedStyle(varianted || '', color || ''), width, height,borderRadius: rounded+'px' }}
             className={styles.container}
             disabled={disabled}
             onClick={onClick}  

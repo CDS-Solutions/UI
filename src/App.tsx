@@ -34,7 +34,9 @@ function App() {
             disabled={disabled}
           >
             
-            <Button>
+            <Button
+            rounded='5'
+            >
               "VALUE"
             </Button>
             <Button>
