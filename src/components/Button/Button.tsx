@@ -55,7 +55,7 @@ const Button:FC<ButtonPropsT> = ({disabled, children, varianted, color,width, he
 
     return (
         <button 
-            style={{...variantedStyle(varianted || '', color || ''), width, height,borderRadius: rounded+'px' }}
+            style={{...variantedStyle(varianted || '', color || ''), width, height, borderRadius: rounded+'px' }}
             className={styles.container}
             disabled={disabled}
             onClick={onClick}  

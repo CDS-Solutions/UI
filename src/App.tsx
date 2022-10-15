@@ -9,6 +9,7 @@ import Input from './components/Input/Input';
 import SplitButton from './components/SplitButton/SplitButton';
 import Switch from './components/Switch/Switch';
 // import TransferList from './components/TransferList/TransferList';
+import { roundedVariant } from './components/Button/Button';
 
 function App() {
 
@@ -32,11 +33,10 @@ function App() {
             orientation={orientation}
             varianted="conteined"
             disabled={disabled}
-            rounded='20'
           >
             
             <Button
-              rounded='5'
+              rounded='20'
             >
               "VALUE"
             </Button>
