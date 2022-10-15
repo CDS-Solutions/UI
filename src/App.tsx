@@ -32,10 +32,11 @@ function App() {
             orientation={orientation}
             varianted="conteined"
             disabled={disabled}
+            rounded='20'
           >
             
             <Button
-            rounded='5'
+              rounded='5'
             >
               "VALUE"
             </Button>

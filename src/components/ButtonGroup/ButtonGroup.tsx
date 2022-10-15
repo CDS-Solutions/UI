@@ -1,4 +1,5 @@
 import React, { FC } from 'react'
+import { roundedVariant } from '../Button/Button';
 
 type Orientation = 'row' |'column'
 
@@ -12,6 +13,7 @@ type ColorGroupProps = {
     children:  any
     varianted?: variantedEnum | string
     orientation?: Orientation | any
+    rounded?: roundedVariant | string,
     disabled?: boolean,
     color?: string,
     width?:string,
@@ -20,7 +22,7 @@ type ColorGroupProps = {
 
 }
 
-const ButtonGroup:FC<ColorGroupProps> = ({varianted, gap, disabled, width, color, orientation, children}) => {
+const ButtonGroup:FC<ColorGroupProps> = ({varianted, gap, disabled, rounded, width, color, orientation, children}) => {
 
     
     const groupStyles = () =>{
@@ -39,7 +41,8 @@ const ButtonGroup:FC<ColorGroupProps> = ({varianted, gap, disabled, width, color
                         varianted: varianted, 
                         width: width,
                         color: color,
-                        disabled: disabled
+                        disabled: disabled,
+                        rounded: rounded
                     })
             })}
         </div>
