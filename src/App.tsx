@@ -138,7 +138,10 @@ function App() {
 
       </Grid>
       <Grid>
-        <PieChart category={[{'color': '#57d9ff', value: 20},{'color': '#f16e23', value: 20}]}/>
+        <PieChart category={[ {'color': '#57d9ff', value: 5, name:'HTML'},
+                              {'color': '#f16e23', value: 50, name:'CSS'},
+                              {'color': '#937e88', value: 50, name:'JS'}]}
+        />
       </Grid>
 
       
