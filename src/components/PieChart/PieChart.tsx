@@ -7,10 +7,12 @@ type PieObject={
 }
 
 type PieChartProps={
-    category: Array<PieObject>
+    category: Array<PieObject>,  
+    ring?: boolean
+
 }
 
-const PieChart:FC<PieChartProps> = ({category}) => {
+const PieChart:FC<PieChartProps> = ({category, ring}) => {
     let canvasRef = useRef<HTMLCanvasElement>(null);
     // const colors = ['#FFC618','#ff2718', '#ff18d1', '#4018ff', '#18ffff', '#18ff3e']
     
@@ -23,7 +25,9 @@ const PieChart:FC<PieChartProps> = ({category}) => {
             let end_angle = 0
           
             if (context) {
-            
+               
+                
+               
                 category.forEach((cat, index)=>{  
                     let slice_angle =  2 * Math.PI * cat.value / 340
                     drawPieSlice(
@@ -34,23 +38,34 @@ const PieChart:FC<PieChartProps> = ({category}) => {
                         start_angle,
                         start_angle + slice_angle,
                         cat.color
-
                     )
+
                     end_angle += slice_angle
                     start_angle += slice_angle
-
+                        ring &&   drawPieSlice(
+                            context,
+                            100,
+                            100,
+                            50,
+                            0,
+                            2 * Math.PI,
+                            "white"
+                        )
                 })
+
+
+             
               
             }
 
         }         
-    })
+    }, [ring])
 
-    function drawPieSlice (ctx: any, centerX: number, 
-            centerY: number, 
-            radius: number, 
-            startAngle: number, 
-            endAngle: number, 
+    function drawPieSlice (ctx: any, centerX: any, 
+            centerY: any, 
+            radius: any, 
+            startAngle: any, 
+            endAngle: any, 
             color: string
         ){
 
