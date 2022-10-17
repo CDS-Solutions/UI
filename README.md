@@ -9,11 +9,13 @@
 - Input - text input, has a value and callback props
 - SplitButton - button with multiple options of values
 - Switch - input that has a two states, on and off
+- PieChart - displays a pie chart, accepts a list of objects
 - TransferList (soon)
 
 ## Apperance
 
-<img src="https://i.ibb.co/ZGp94Bf/image.png" width="300" height="350" /> | <img src="https://i.ibb.co/1dbxWrY/image.png" width="300" height="350" />
+<img src="https://i.ibb.co/ZGp94Bf/image.png" width="300" height="350" /> | <img src="https://i.ibb.co/1dbxWrY/image.png" width="300" height="350" /> | 
+<img src="https://i.ibb.co/qJN05xd/image.png" width="300" height="200" />
 
 
 ## Code example
