@@ -9,6 +9,7 @@ import Input from './lib/components/Input/Input';
 import SplitButton from './lib/components/SplitButton/SplitButton';
 import Switch from './lib/components/Switch/Switch';
 // import TransferList from './components/TransferList/TransferList';
+import PieChart from './lib/components/PieChart/PieChart';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
   const [countColumns, setCountColumns] = useState<number>(2)
   const [orientation, setOrientation] = useState<string>('row')
   const [color, setColor] = useState<any>()
+  const [ringState, setRingState] = useState(false)
   // const secondArray  = ['первый элемент', 'ваыаыва','ываывацуауа']
   // const firstArray  = ['первый элемент', 'ваыаыва','ываывацуауа']
   
@@ -132,6 +134,13 @@ function App() {
 
         </ColorGroup>
 
+      </Grid>
+      <Grid>
+        <PieChart ring={ringState} category={[ {'color': '#1abc9c', value: 120, name:'HTML'},
+                              {'color': '#9b59b6', value: 120, name:'CSS'},
+                              {'color': '#3498db', value: 120, name:'JS'}]}
+        />
+        <Button onClick={() => setRingState(!ringState)}>Switch ring</Button>
       </Grid>
 
       

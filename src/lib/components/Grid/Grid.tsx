@@ -10,9 +10,9 @@ enum shadowEnum{
 
 type GridProps = {
     color?: string,
-    width?:string
+    width?: string
     shadow?: shadowEnum | string,
-    children?: JSX.Element[] | JSX.Element
+    children?: React.ReactNode  
     tcolumns?: number
 }
 
