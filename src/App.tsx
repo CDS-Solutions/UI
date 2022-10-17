@@ -9,8 +9,7 @@ import Input from './lib/components/Input/Input';
 import SplitButton from './lib/components/SplitButton/SplitButton';
 import Switch from './lib/components/Switch/Switch';
 // import TransferList from './components/TransferList/TransferList';
-import { roundedVariant } from './components/Button/Button';
-import PieChart from './components/PieChart/PieChart';
+import PieChart from './lib/components/PieChart/PieChart';
 
 function App() {
 
@@ -37,9 +36,7 @@ function App() {
             disabled={disabled}
           >
             
-            <Button
-              rounded='20'
-            >
+            <Button>
               "VALUE"
             </Button>
             <Button>
