@@ -1,0 +1,39 @@
+.container{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.checkbox{
+    position: relative;
+    background-color: red;
+    padding: 5px 5px;
+    border-radius: 5px;
+    border: 3px solid #9291911f;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+svg{
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    
+    transform: translate(-50%, -50%);
+}
+.active{
+    animation: blow 0.1s;
+}
+
+label{
+    cursor: pointer;
+}
+
+@keyframes blow {
+    from{
+        outline: 3px solid rgb(200, 200, 200);
+    }
+
+    to{
+        outline: 0px solid rgb(200, 200, 200);
+    }
+}
